@@ -3,7 +3,7 @@
 [![Build Status](https://github.com/EvanJayChou/marl_robotics/workflows/CI/badge.svg)](https://github.com/EvanJayChou/marl_robotics/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-![Isaac Sim](https://img.shields.io/badge/-CUDA-76B900?logo=nvidia&logoColor=white)
+[![Isaac Sim](https://img.shields.io/badge/-CUDA-76B900?logo=nvidia&logoColor=white)]
 [![ROS 2 Humble](https://img.shields.io/badge/ROS%202-Humble-blue.svg)](https://docs.ros.org/en/humble/)
 
 ## 🚀 Quick Start
