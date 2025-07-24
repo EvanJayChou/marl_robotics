@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Chou"
+    given-names: "Evan"
+    orcid: "https://orcid.org/0009-0003-1123-892X"
+title: "Multi-Agent Reinforcement Learning for Bipedal Robotics"
+version: 1.0.0
+doi: 10.5281/zenodo.1234567
+url: "https://github.com/EvanJayChou/marl_robotics"
+repository-code: "https://github.com/EvanJayChou/marl_robotics"
+license: MIT
+date-released: 2025-07-23
