@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+# === SHARED ATTENTION ENCODER ===
 class SharedAttentionEncoder(nn.Module):
     def __init__(self, obs_dim, hidden_dim=128, n_heads=4, n_layers=2):
         super().__init__()
@@ -17,6 +18,7 @@ class SharedAttentionEncoder(nn.Module):
         x = self.transformer_encoder(x)
         return x
 
+# === POLICY HEAD ===
 class PolicyHead(nn.Module):
     def __init__(self, hidden_dim, action_dim, action_type="discrete"):
         super().__init__()
@@ -37,6 +39,7 @@ class PolicyHead(nn.Module):
         else:
             return action_logits, self.log_std.exp().expand_as(action_logits)
 
+# === VALUE HEAD ===
 class ValueHead(nn.Module):
     def __init__(self, hidden_dim):
         super().__init__()
@@ -62,6 +65,7 @@ class CentralizedCritic(nn.Module):
         x = F.relu(self.fc2(x))
         return self.fc3(x).squeeze(-1)
 
+# === AGENT MODULE ===
 class AgentModule(nn.Module):
     def __init__(
             self,
