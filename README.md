@@ -7,10 +7,10 @@
 [![ROS 2 Humble](https://img.shields.io/badge/ROS%202-Humble-blue.svg)](https://docs.ros.org/en/humble/)
 
 ## 🚀 Quick Start
-[Installation instructions, demo video, key features]
+*To be written*
 
 ## 📖 Documentation
-[Links to detailed documentation]
+*To be written*
 
 ## 🎯 Project Overview
 
@@ -32,13 +32,16 @@ This research project investigates the use of simulative environments and large-
 - CUDA Toolkit
 
 ## 🏗️ Architecture
-[System architecture diagram and explanation]
+
+- Neural network models and deep reinforcement learning algorithms are formulated
+- Isaac Sim renders the URDF and simulative environments for large-scale RL
+- ROS 2 integrates the models and perception systems together
 
 ## 📊 Results
-[Key results, performance metrics, comparison tables]
+*To be written*
 
 ## 🤝 Contributing
-[Contribution guidelines]
+*To be written*
 
 ## Credits
 
