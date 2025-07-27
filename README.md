@@ -1,16 +1,16 @@
 # Multi-Agent Reinforcement Learning for Coordinated Bipedal Robotics
 
-[![Build Status](https://github.com/EvanJayChou/marl_robotics/workflows/CI/badge.svg)](https://github.com/EvanJayChou/marl_robotics/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Isaac Sim](https://img.shields.io/badge/IsaacSim-4.5-76B900?logo=nvidia&logoColor=white)](https://developer.nvidia.com/isaac/sim)
+[![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![Isaac Sim](https://img.shields.io/badge/Isaac%20Sim-4.5-76B900?logo=nvidia&logoColor=white)](https://developer.nvidia.com/isaac/sim)
 [![ROS 2 Humble](https://img.shields.io/badge/ROS%202-Humble-blue.svg)](https://docs.ros.org/en/humble/)
 
 ## 🚀 Quick Start
-[Installation instructions, demo video, key features]
+*To be written*
 
 ## 📖 Documentation
-[Links to detailed documentation]
+*To be written*
 
 ## 🎯 Project Overview
 
@@ -32,13 +32,16 @@ This research project investigates the use of simulative environments and large-
 - CUDA Toolkit
 
 ## 🏗️ Architecture
-[System architecture diagram and explanation]
+
+- Neural network models and deep reinforcement learning algorithms are formulated
+- Isaac Sim renders the URDF and simulative environments for large-scale RL
+- ROS 2 integrates the models and perception systems together
 
 ## 📊 Results
-[Key results, performance metrics, comparison tables]
+*To be written*
 
 ## 🤝 Contributing
-[Contribution guidelines]
+*To be written*
 
 ## Credits
 
