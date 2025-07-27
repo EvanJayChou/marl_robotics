@@ -1,4 +1,4 @@
-from models.neural_networks.attention_models import AgentModule
+from src.agents.attention_agent import AttentionAgent
 import torch
 import torch.nn as nn
 import torch.nn.functional as F

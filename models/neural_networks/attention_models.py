@@ -22,10 +22,9 @@ class SharedAttentionEncoder(nn.Module):
 class PolicyHead(nn.Module):
     def __init__(self, hidden_dim, action_dim, action_type="discrete"):
         super().__init__()
-        self.action_type=action_type
+        self.action_type = action_type
         self.fc1 = nn.Linear(hidden_dim, hidden_dim)
         self.fc2 = nn.Linear(hidden_dim, action_dim)
-
 
         if action_type == "continuous":
             self.log_std = nn.Parameter(torch.zeros(action_dim))
@@ -51,6 +50,7 @@ class ValueHead(nn.Module):
         values = self.fc2(x).squeeze(-1)
         return values
 
+# === CENTRALIZED CRITIC ===
 class CentralizedCritic(nn.Module):
     def __init__(self, num_agents, hidden_dim):
         super().__init__()
@@ -64,40 +64,3 @@ class CentralizedCritic(nn.Module):
         x = F.relu(self.fc1(x))
         x = F.relu(self.fc2(x))
         return self.fc3(x).squeeze(-1)
-
-# === AGENT MODULE ===
-class AgentModule(nn.Module):
-    def __init__(
-            self,
-            obs_dim,
-            action_dim,
-            num_agents,
-            hidden_dim=128,
-            action_type="discrete",
-            n_heads=4,
-            n_layers=2,
-            use_centralized_critic=False
-    ):
-        super().__init__()
-        self.encoder = SharedAttentionEncoder(obs_dim, hidden_dim, n_heads, n_layers)
-        self.policy_head = PolicyHead(hidden_dim, action_dim, action_type)
-        self.value_head = ValueHead(hidden_dim)
-
-        self.use_centralized_critic = use_centralized_critic
-        if use_centralized_critic:
-            self.centralized_critic = CentralizedCritic(num_agents, hidden_dim)
-    
-    def forward(self, obs_batch):
-        encoded = self.encoder(obs_batch)
-        policy_output = self.policy_head(encoded)
-        value_output = self.value_head(encoded)
-
-        outputs = {
-            "policy": policy_output,
-            "value": value_output
-        }
-
-        if self.use_centralized_critic:
-            outputs["central_value"] = self.centralized_critic(encoded)
-        
-        return outputs
