@@ -22,13 +22,14 @@ This research project investigates the use of simulative environments and large-
 - Coordinated bipedal locomotion through multi-agent autonomy
 - Sim2Real transfer and integration in preparation for real-world use
 
-### Software Specifications
+### System Requirements / Specifications
 
 - NVIDIA Isaac Sim
 - Linux: Ubuntu 22.04 (WSL 2)
 - Robot Operating System 2 (ROS 2)
-- PyTorch
-- Stable Baselines3
+- Python 3.8+
+- PyTorch 1.9+
+- NumPy
 - CUDA Toolkit
 
 ## 🏗️ Architecture
