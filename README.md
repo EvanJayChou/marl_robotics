@@ -48,4 +48,4 @@ This research project investigates the use of simulative environments and large-
 
 Developed by Evan Chou
 
-*Inspired by Disney Research's BDX Droids*
+*Inspired by NVIDIA, Google Deepmind, and Disney Research's BDX Droids*
